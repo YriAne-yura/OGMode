@@ -1,5 +1,6 @@
 # OGMode
 Công cụ tối ưu hoá hệ điều hành windows, optimize windows for gaming , one click game mode on desktop - laptop.
+
 Trang bài viết chính: https://osteup.com/ogmode/
 
 Được build bởi Osteup . Sử dụng ngôn ngữ C# + Batch Tuỳ chỉnh máy tính / laptop .
