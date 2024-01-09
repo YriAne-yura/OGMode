@@ -16,12 +16,12 @@ Trang bài viết chính: https://osteup.com/ogmode/
 
 # Nhược điểm
 * Giao diện , đồ hoạ trên máy tính có thể xấu đi ( đồng nghĩa với máy tính bớt gánh hiệu ứng chống máy hoạt động chậm )
-* Chương trình vẫn trong quá trình beta (Thử nghiệm C#)
+* Chương trình beta Thử nghiệm C#
 
 # Yêu cầu
 Phù hợp với mọi thiết bị máy cấu hình yếu
 * [.NET Framework ](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48)
-* Tải và cài đặt:
+* Tải và cài đặt: [OGMODE](https://github.com/SiroCandy06/OGMode/releases/tag/OGMode)
 
 # Cách Sử dụng
 Đơn giản thoi. 
