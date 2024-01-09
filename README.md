@@ -1,4 +1,4 @@
-![image](https://github.com/SiroCandy06/OGMode/assets/101639160/e88b2849-db82-4fc0-9551-ad2127c7080e)# OGMode
+# OGMode
 Công cụ tối ưu hoá hệ điều hành windows, optimize windows for gaming , one click game mode on desktop - laptop.
 
 Trang bài viết chính: https://osteup.com/ogmode/
