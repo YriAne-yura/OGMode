@@ -40,7 +40,7 @@ Phù hợp với mọi thiết bị máy cấu hình yếu
 # Các Phiên bản trước bản v1 ( v0.1 -> v0.5 )
 Đều được sử dụng bằng code batch để tối ưu game.
 
-Bạn có thể đọc thêm chi tiết [tại đây](https://osteup.com/tool-ogmode-fix-lag-windows-toi-uu-hoa-may-tinh/)https://osteup.com/tool-ogmode-fix-lag-windows-toi-uu-hoa-may-tinh/
+Bạn có thể đọc thêm chi tiết [tại đây](https://osteup.com/tool-ogmode-fix-lag-windows-toi-uu-hoa-may-tinh/)
 
 # Hỗ trợ - Trợ giúp
 Bạn có thể tham gia cộng đồng discord của chúng tôi hoặc liên hệ với tôi qua danh mục "Liên hệ"
