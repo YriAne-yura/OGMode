@@ -5,7 +5,7 @@ Trang bài viết chính: https://osteup.com/ogmode/
 
 Được build bởi Osteup . Sử dụng ngôn ngữ C# + Batch Tuỳ chỉnh máy tính / laptop .
 
-![image](https://github.com/SiroCandy06/OGMode/assets/101639160/a6d81bbc-aa5c-4025-ab1c-b789fdc7bda0)
+![image](https://github.com/SiroCandy06/OGMode/assets/101639160/cba60815-66c9-460e-8ee2-fcea929d22f8)
 
 # Lợi ích Mang Lại
 * Sử Dụng Nhanh Chóng Tiện Lợi
