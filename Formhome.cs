@@ -1,37 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
+﻿using Microsoft.Win32;
+using System.Diagnostics;
+using System.Drawing.Drawing2D;
+using System.Runtime.InteropServices;
+using System.Security.Principal;
 using System.ServiceProcess;
 using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Drawing.Drawing2D;
-using System.Security.Principal;
-using System.Threading.Tasks;
-using System.Runtime.InteropServices;
-using System.Diagnostics;
-using Microsoft.Win32;
 
 namespace ogmm
 {
     public partial class Formhome : Form
     {
+        [DllImport("psapi")]
+        public static extern int EmptyWorkingSet(IntPtr handle);
+
         // Danh sách tên dịch vụ cần tắt khi bật Game Mode
         List<string> backendServicesToStop = new List<string> { "EventLog", "lmhosts", "BITS",
         "Dnscache","BcastDVRUserService_78710","Spooler","seclogon","SCardSvr","ScDeviceEnum","SysMain","TapiSrv",
-        "Themes","WSearch","mpssvc","XblAuthManager","BthAvctpSvc","bthserv","BTAGService",
-        "BluetoothUserService_8c6ce","DiagTrack","MapsBroker","SharedAccess",
-        "Netlogon","PcaSvc","WpcMonSvc","WerSvc","FrameServer",
+        "Themes","WSearch","mpssvc","XblAuthManager","BthAvctpSvc","DiagTrack","MapsBroker","SharedAccess",
+        "PcaSvc","WpcMonSvc","WerSvc","FrameServer",
         "wisvc","LanmanServer"
         };
         List<string> displayServicesToStop = new List<string> { "EventLogServices", "TCP/IP NetBIOS Helper", "Background Intelligent Transfer Service",
         "DNS Client","BcastDVRUserService","Print Spooler","Secondary Logon","Smart Card","Smart Card Device Enumeration Service","SysMain","Telephony",
-        "Themes","Windows Search","Windows Defender Firewall","Xbox Live Auth Manager","AVCTP service","Bluetooth Support Service","Bluetooth Audio Gateway Service",
-        "Bluetooth User Support Service_8c6ce","Connected User Experiences and Telemetry","Downloaded Maps Manager","Internet Connection Sharing (ICS)",
-        "Netlogon","Program Compatibility Assistant Service","Parental Controls","Windows Error Reporting Service","Windows Camera Frame Server",
+        "Themes","Windows Search","Windows Defender Firewall","Xbox Live Auth Manager","AVCTP service","Connected User Experiences and Telemetry","Downloaded Maps Manager","Internet Connection Sharing (ICS)",
+        "Program Compatibility Assistant Service","Parental Controls","Windows Error Reporting Service","Windows Camera Frame Server",
         "Windows Insider Service","Server"
         };
 
@@ -45,6 +37,7 @@ namespace ogmm
         {
             // Gọi hàm để làm cho btngamemode trở thành hình tròn
             MakeCircularButton(btngamemode);
+
 
             // Khôi phục trạng thái và màu của btngamemode từ Properties.Settings
             bool isGameModeEnabled = Properties.Settings.Default.IsGameModeEnabled;
@@ -61,7 +54,8 @@ namespace ogmm
             outputgamemode.Multiline = true;
 
         }
-        
+
+
         private bool SetValueInRegistry(string registryPath, string valueName, object value, RegistryValueKind valueKind)
         {
             try
@@ -136,13 +130,13 @@ namespace ogmm
         }
 
         private async void btngamemode_Click(object sender, EventArgs e)
-{
-    bool isGameModeEnabled;
-    Color buttonColor;
-    Color textColor;
+        {
+            bool isGameModeEnabled;
+            Color buttonColor;
+            Color textColor;
 
-    // Clear text sau khi thêm thông báo
-    ClearOutputGamemode();
+            // Clear text sau khi thêm thông báo
+            ClearOutputGamemode();
 
             if (btngamemode.Text == "Bắt Đầu")
             {
@@ -160,6 +154,11 @@ namespace ogmm
                     EndExplorerTask();
                 }
                 outputgamemode.Text += Environment.NewLine;
+
+                // Memory Clean
+                Process[] process = Process.GetProcesses();
+                foreach (Process p in process) try { EmptyWorkingSet(p.Handle); } catch { }
+                DirectoryInfo directory = new DirectoryInfo(Path.GetTempPath());
 
                 UpdateOutputGamemode("GAME MODE ĐÃ ĐƯỢC BẬT");
             }
@@ -198,6 +197,11 @@ namespace ogmm
                 {
                     EndExplorerTask();
                 }
+                // Memory Clean
+                Process[] process = Process.GetProcesses();
+                foreach (Process p in process) try { EmptyWorkingSet(p.Handle); } catch { }
+                DirectoryInfo directory = new DirectoryInfo(Path.GetTempPath());
+
                 outputgamemode.Text += Environment.NewLine;
                 UpdateOutputGamemode("GAME MODE ĐÃ ĐƯỢC BẬT");
             }
@@ -209,7 +213,7 @@ namespace ogmm
 
             // Áp dụng trạng thái và màu
             ApplyButtonState(isGameModeEnabled, buttonColor);
-    }
+        }
         private void EndExplorerTask()
         {
             try
@@ -219,7 +223,7 @@ namespace ogmm
                 foreach (Process explorerProcess in explorerProcesses)
                 {
                     Process.Start(@"C:\Windows\System32\taskkill.exe", @"/F /IM explorer.exe");
-                    UpdateOutputGamemode("End Task Thành Công Windows Explorer exe"); 
+                    UpdateOutputGamemode("End Task Thành Công Windows Explorer exe");
                 }
             }
             catch (Exception ex)
@@ -288,11 +292,6 @@ namespace ogmm
                 else
                     messageBuilder.AppendLine("IconsOnly: Tắt Thất bại.");
 
-                if (SetValueInRegistry(registryPath, "ListviewShadow", 0, RegistryValueKind.DWord))
-                    messageBuilder.AppendLine("ListviewShadow: Tắt Thành công.");
-                else
-                    messageBuilder.AppendLine("ListviewShadow: Tắt Thất bại.");
-
                 if (SetValueInRegistry(registryPath, "ThumbnailLivePreviewHoverTime", 0, RegistryValueKind.DWord))
                     messageBuilder.AppendLine("ThumbnailLivePreviewHoverTime: Tắt Thành công.");
                 else
@@ -303,10 +302,6 @@ namespace ogmm
                 else
                     messageBuilder.AppendLine("ThumbnailLivePreviewHover: Tắt Thất bại.");
 
-                if (SetValueInRegistry(registryPath, "ListViewAlphaSelect", 0, RegistryValueKind.DWord))
-                    messageBuilder.AppendLine("ListViewAlphaSelect: Tắt Thành công.");
-                else
-                    messageBuilder.AppendLine("ListViewAlphaSelect: Tắt Thất bại.");
 
                 // Thêm các giá trị khác nếu cần thiết
 
@@ -360,15 +355,10 @@ namespace ogmm
                 else
                     messageBuilder.AppendLine("ListviewShadow: Khôi phục Thất bại.");
 
-                if (SetValueInRegistry(registryPath, "IconsOnly", 1, RegistryValueKind.DWord))
+                if (SetValueInRegistry(registryPath, "IconsOnly", 0, RegistryValueKind.DWord))
                     messageBuilder.AppendLine("IconsOnly: Khôi phục Thành công.");
                 else
                     messageBuilder.AppendLine("IconsOnly: Khôi phục Thất bại.");
-
-                if (SetValueInRegistry(registryPath, "ListviewShadow", 1, RegistryValueKind.DWord))
-                    messageBuilder.AppendLine("ListviewShadow: Khôi phục Thành công.");
-                else
-                    messageBuilder.AppendLine("ListviewShadow: Khôi phục Thất bại.");
 
                 if (SetValueInRegistry(registryPath, "ThumbnailLivePreviewHoverTime", 1, RegistryValueKind.DWord))
                     messageBuilder.AppendLine("ThumbnailLivePreviewHoverTime: Khôi phục Thành công.");
@@ -380,10 +370,7 @@ namespace ogmm
                 else
                     messageBuilder.AppendLine("ThumbnailLivePreviewHover: Khôi phục Thất bại.");
 
-                if (SetValueInRegistry(registryPath, "ListViewAlphaSelect", 1, RegistryValueKind.DWord))
-                    messageBuilder.AppendLine("ListViewAlphaSelect: Khôi phục Thành công.");
-                else
-                    messageBuilder.AppendLine("ListViewAlphaSelect: Khôi phục Thất bại.");
+
 
                 // Thêm các giá trị khác nếu cần thiết
 
@@ -414,7 +401,9 @@ namespace ogmm
                     ServiceController[] services = ServiceController.GetServices();
 
                     // Kiểm tra xem dịch vụ có tồn tại không
+#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
                     ServiceController serviceController = services.FirstOrDefault(s => s.ServiceName == backendServiceName);
+#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
 
                     if (serviceController != null)
                     {
@@ -455,7 +444,9 @@ namespace ogmm
                     ServiceController[] services = ServiceController.GetServices();
 
                     // Kiểm tra xem dịch vụ có tồn tại không
+#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
                     ServiceController serviceController = services.FirstOrDefault(s => s.ServiceName == backendServiceName);
+#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
 
                     if (serviceController != null)
                     {
@@ -490,5 +481,42 @@ namespace ogmm
             endExplorerTask = checkexplorer.Checked;
         }
 
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            string backendService1 = "bthserv";
+            string displayService1 = "Bluetooth Support Service";
+
+            string backendService2 = "BTAGService";
+            string displayService2 = "Bluetooth Audio Gateway Service";
+
+            string backendService3 = "BluetoothUserService";
+            string displayService3 = "Bluetooth User Support Service";
+
+            if (checkBox1.Checked)
+            {
+                // Nếu CheckBox được chọn, thêm vào cuối danh sách
+                backendServicesToStop.Add(backendService1);
+                displayServicesToStop.Add(displayService1);
+
+                backendServicesToStop.Add(backendService2);
+                displayServicesToStop.Add(displayService2);
+
+                backendServicesToStop.Add(backendService3);
+                displayServicesToStop.Add(displayService3);
+            }
+            else
+            {
+                // Nếu CheckBox không được chọn, loại bỏ khỏi danh sách
+                backendServicesToStop.Remove(backendService1);
+                displayServicesToStop.Remove(displayService1);
+
+                backendServicesToStop.Remove(backendService2);
+                displayServicesToStop.Remove(displayService2);
+
+                backendServicesToStop.Remove(backendService3);
+                displayServicesToStop.Remove(displayService3);
+            }
+
+        }
     }
 }

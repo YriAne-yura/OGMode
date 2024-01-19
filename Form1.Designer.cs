@@ -20,7 +20,7 @@ namespace ogmm
             }
             base.Dispose(disposing);
         }
- 
+
         private void time1_Tick(object sender, EventArgs e)
         {
             Opacity = 100;
@@ -218,8 +218,8 @@ namespace ogmm
             // pictureBox1
             // 
             pictureBox1.Cursor = Cursors.Hand;
-            pictureBox1.Image = Properties.Resources.Untitled_11;
-            pictureBox1.Location = new Point(62, 12);
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(60, 21);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(64, 64);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -305,9 +305,9 @@ namespace ogmm
             label6.ForeColor = SystemColors.ButtonFace;
             label6.Location = new Point(243, 114);
             label6.Name = "label6";
-            label6.Size = new Size(234, 18);
+            label6.Size = new Size(267, 18);
             label6.TabIndex = 2;
-            label6.Text = "Update thêm tối ưu hoá vô game mode";
+            label6.Text = "Sử dụng khi render đồ hoạ nặng edit video";
             // 
             // label5
             // 
@@ -316,9 +316,9 @@ namespace ogmm
             label5.ForeColor = SystemColors.ButtonFace;
             label5.Location = new Point(243, 71);
             label5.Name = "label5";
-            label5.Size = new Size(164, 18);
+            label5.Size = new Size(259, 18);
             label5.TabIndex = 1;
-            label5.Text = "Update thêm hiệu ứng app";
+            label5.Text = "Sử dụng khi chơi game, tác vụ nặng và lag";
             label5.Click += label5_Click;
             // 
             // label4
@@ -330,7 +330,7 @@ namespace ogmm
             label4.Name = "label4";
             label4.Size = new Size(109, 19);
             label4.TabIndex = 0;
-            label4.Text = "OGMode v1.1.0";
+            label4.Text = "OGMode v1.2.0";
             // 
             // panel4
             // 
@@ -388,10 +388,11 @@ namespace ogmm
             Controls.Add(panel4);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             Opacity = 0D;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "OGMode";
             Load += Form1_Load;
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);

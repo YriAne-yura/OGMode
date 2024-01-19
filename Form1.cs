@@ -1,9 +1,5 @@
 ﻿using System.Runtime.InteropServices;
-using System;
-using System.Drawing;
-using System.Windows.Forms;
-using System.Xml.Linq;
-using System.Reflection;
+using System.Security.Principal;
 
 namespace ogmm
 {
@@ -26,6 +22,34 @@ namespace ogmm
         public static extern bool ReleaseCapture();
         const int WM_NCLBUTTONDOWN = 0xA1;
         const int HT_CAPTION = 0x2;
+
+        [DllImport("user32.dll")]
+        private static extern bool SetForegroundWindow(IntPtr hWnd);
+
+        // Kiểm tra quyền Administrator
+        private void CheckAdminPrivilege()
+        {
+            if (!IsRunAsAdmin())
+            {
+                MessageBox.Show("Chạy ứng dụng với quyền Administrator để hoạt động tối đa 100% chức năng của công cụ OGMode", "Yêu Cầu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                // Tự động tìm và mở lại cửa sổ nếu cửa sổ đã tồn tại
+                IntPtr hwnd = FindWindow(null, this.Text);
+                if (hwnd != IntPtr.Zero)
+                {
+                    ShowWindow(hwnd, SW_RESTORE);
+                    SetForegroundWindow(hwnd);
+                }
+
+                Application.Exit();
+            }
+        }
+        private static bool IsRunAsAdmin()
+        {
+            WindowsIdentity identity = WindowsIdentity.GetCurrent();
+            WindowsPrincipal principal = new WindowsPrincipal(identity);
+            return principal.IsInRole(WindowsBuiltInRole.Administrator);
+        }
 
         private void Form1_SizeChanged(object sender, EventArgs e)
         {
@@ -104,7 +128,7 @@ namespace ogmm
                 Opacity -= 0.1; // Adjust the decrement value for the fading speed
                 System.Threading.Thread.Sleep(1); // Add a delay to control the fading speed
                 Application.DoEvents(); // Allow the UI to update during the loop
-                if (Opacity == 0 )
+                if (Opacity == 0)
                 {
                     this.Close();
                 }
@@ -131,6 +155,8 @@ namespace ogmm
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            CheckAdminPrivilege();
+
             btnclose.Click += btnclose_Click;
 
             // Bổ sung code để lấy tên người dùng và thay thế cho "usernamelog"
@@ -278,7 +304,7 @@ namespace ogmm
 
         private void timer2_tick(object sender, EventArgs e)
         {
-           
+
         }
 
     }

@@ -37,6 +37,7 @@
             label2 = new Label();
             label1 = new Label();
             panel2 = new Panel();
+            checkBox1 = new CheckBox();
             checkexplorer = new CheckBox();
             label3 = new Label();
             Userwindows = new Label();
@@ -112,12 +113,13 @@
             label1.ForeColor = SystemColors.ControlDark;
             label1.Location = new Point(15, 13);
             label1.Name = "label1";
-            label1.Size = new Size(216, 13);
+            label1.Size = new Size(190, 13);
             label1.TabIndex = 0;
-            label1.Text = "WDLF Osteup [ Version v0.01.2564 beta ]";
+            label1.Text = "WDLF Osteup [ Version v0.03.8847 ]";
             // 
             // panel2
             // 
+            panel2.Controls.Add(checkBox1);
             panel2.Controls.Add(checkexplorer);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(Userwindows);
@@ -127,6 +129,19 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(749, 152);
             panel2.TabIndex = 6;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            checkBox1.ForeColor = SystemColors.Control;
+            checkBox1.Location = new Point(56, 135);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(124, 19);
+            checkBox1.TabIndex = 7;
+            checkBox1.Text = "Dịch Vụ Bluetooth";
+            checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // checkexplorer
             // 
@@ -202,5 +217,6 @@
         private Label label2;
         private TextBox outputgamemode;
         private CheckBox checkexplorer;
+        private CheckBox checkBox1;
     }
 }

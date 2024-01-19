@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Linq;
+﻿using System.ComponentModel;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace ElipseToolDemo
 {
-    class ElipseControl : Component
+    internal class ElipseControl : Component
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -27,7 +20,9 @@ namespace ElipseToolDemo
 
         public Control TargetControl
         {
+#pragma warning disable CS8603 // Possible null reference return.
             get { return _cntrl; }
+#pragma warning restore CS8603 // Possible null reference return.
             set
             {
                 _cntrl = value;
