@@ -29,14 +29,17 @@ Phù hợp với mọi thiết bị máy cấu hình yếu
 Đơn giản thoi. 
 
 - Tải và cài đặt chương trình OGmode
-- Mở chương trình lên và sử dụng các chức năng bạn thích
+- Mở chương trình lên với quyền admin và sử dụng các chức năng bạn thích
 
-![image](https://github.com/SiroCandy06/OGMode/assets/101639160/aab5e181-869c-46ce-a105-7f4526e11f0b)
+![image](https://github.com/SiroCandy06/OGMode/assets/101639160/7aa1fed3-ccea-490b-9622-58856c0d3d04)
 
 - Tick vào "Windows Explorer" là tắt Windows Explorer khi bạn sử dụng chế độ trò chơi, bỏ tick thì không tắt.
 - Windows explorer cũng ăn khá nhiều dung lượng RAM trên các cấu hình trung.
 
 ![image](https://github.com/SiroCandy06/OGMode/assets/101639160/65f2b9e1-d9e6-4c7f-97d3-82d798699a4b)
+
+![image](https://github.com/SiroCandy06/OGMode/assets/101639160/21b3fd66-cdce-4927-8bf5-6a6e1c1536f7)
+
 
 
 # Các Phiên bản trước bản v1 ( v0.1 -> v0.5 )
