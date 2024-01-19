@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "u1WlXVXZ3EJ64DaZuPMzVbDmKURqalX1mkd9qKUS9KlD7wcJ18HOlmnz5GCB722GzYkImCr7/QxjRVei0bswXw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Sirocandy\\source\\repos\\ogmm\\ogmm\\ogmm.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Sirocandy\\.nuget\\packages\\system.diagnostics.eventlog\\8.0.0\\system.diagnostics.eventlog.8.0.0.nupkg.sha512",
+    "C:\\Users\\Sirocandy\\.nuget\\packages\\system.serviceprocess.servicecontroller\\8.0.0\\system.serviceprocess.servicecontroller.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
