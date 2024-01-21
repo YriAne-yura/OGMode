@@ -22,7 +22,7 @@ Trang bài viết chính: https://osteup.com/ogmode/
 
 # Yêu cầu
 Phù hợp với mọi thiết bị máy cấu hình yếu
-* [.NET Framework ](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48)
+* [.NET Desktop Runtime 8.0.1](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 * Tải và cài đặt: [OGMODE](https://github.com/SiroCandy06/OGMode/releases/tag/OGMode)
 
 # Cách Sử dụng
