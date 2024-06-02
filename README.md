@@ -46,6 +46,8 @@ Phù hợp với mọi thiết bị máy cấu hình yếu
 ## V1.4 ( Đang chuẩn bị )
 - Fix Lỗi Công Cụ Load Chậm [BUG]
 - Thêm Check Update Vô Chương trình
+- Sửa một số lỗi nhỏ mà viewer báo cáo trước đó
+- Thêm Tweaks Tối ưu
 - 
 ## V1.3 – 6/3/2024
 - Fix lỗi văng game roblox
