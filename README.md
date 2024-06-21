@@ -44,6 +44,7 @@ Phù hợp với mọi thiết bị máy cấu hình yếu
 
 # Các phiên bản gần đây
 ## V1.4 ( Đang chuẩn bị )
+### fa
 - Fix Lỗi Công Cụ Load Chậm [BUG]
 - Thêm Check Update Vô Chương trình
 - Sửa một số lỗi nhỏ mà viewer báo cáo trước đó
