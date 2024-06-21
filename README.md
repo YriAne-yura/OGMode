@@ -44,12 +44,20 @@ Phù hợp với mọi thiết bị máy cấu hình yếu
 
 # Các phiên bản gần đây
 ## V1.4 ( Đang chuẩn bị )
-### fa
+### Cải Thiện
 - Fix Lỗi Công Cụ Load Chậm [BUG]
-- Thêm Check Update Vô Chương trình
+- Thêm Check Update Vô Chương trình ( Bắt đầu hoạt động ở phiên bản 1.4 )
 - Sửa một số lỗi nhỏ mà viewer báo cáo trước đó
-- Thêm Tweaks Tối ưu
-- 
+### Game Mode
+- Cập nhập lên v0.4.6847
+- Thêm một số tính năng tối ưu cải thiện hơn so với phiên bản trước
+### Công Cụ
+- Tuỳ chỉnh RAM (Dọn RAM) Update v0.2
+### Tweaks 
+- Xoá cái fix youtube lag và tự động bổ sung vào chương trình sau khi sử dụng công cụ (Tự động)
+- Thêm tính năng tinh chỉnh hệ thống (Registry Cơ bản)
+- Button Khởi động Explorer ( Cho ai lười khởi động máy mà muốn trải nghiệm luôn registry sau khi sửa đổi, Hiệu quả 80% so với khởi động lại )
+
 ## V1.3 – 6/3/2024
 - Fix lỗi văng game roblox
 - Fix lỗi lag trình duyệt + youtube triệt để hơn v1.2
