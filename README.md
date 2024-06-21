@@ -43,7 +43,7 @@ Phù hợp với mọi thiết bị máy cấu hình yếu
 ![image](https://github.com/SiroCandy06/OGMode/assets/101639160/40c9ad34-4e0e-43f5-a320-cf500b1b0910)
 
 # Các phiên bản gần đây
-## V1.4 ( Đang chuẩn bị )
+## V1.4 23/6/2024
 ### Cải Thiện
 - Fix Lỗi Công Cụ Load Chậm [BUG]
 - Thêm Check Update Vô Chương trình ( Bắt đầu hoạt động ở phiên bản 1.4 )
