@@ -1,6 +1,8 @@
 # OGMode
 Công cụ tối ưu hoá Windows cho gaming. Chế độ game mode một chạm cho máy tính và laptop.
 
+[🇬🇧 View English version](./README.md)
+
 Chỉ với **một cú click**, OGMode sẽ giúp máy tính cấu hình yếu chơi game mượt hơn với các tinh chỉnh có sẵn. 🚀
 
 **Trang chính:** [OGMode trên Osteup](https://osteup.com/ogmode/)
