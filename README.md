@@ -1,101 +1,108 @@
+**README.md**
+
+```markdown
 # OGMode
-Công cụ tối ưu hoá hệ điều hành windows, optimize windows for gaming , one click game mode on desktop - laptop.
+A tool to optimize Windows for gaming. One-click game mode for desktops and laptops.
 
-Chỉ với 1 click sẽ giúp cho chiếc máy tính cấu hình yếu của bạn chơi game mượt hơn thông thường với các tweaks tối ưu có sẵn trên công cụ OGMode của tớ :3
+With just one click, OGMode applies pre-configured tweaks to make low-end PCs run games more smoothly. 🚀
 
-Trang bài viết chính: https://osteup.com/ogmode/
+**Main page:** [OGMode on Osteup](https://osteup.com/ogmode/)
 
-Được build bởi Osteup . Sử dụng ngôn ngữ C# + Batch Tuỳ chỉnh máy tính / laptop .
+Built by **Osteup** using **C#** and **Batch scripting** for system optimizations.
 
-![image](https://github.com/SiroCandy06/OGMode/assets/101639160/e50f465b-47b9-4b1a-9c4d-c6fdafaff1c5)
+![OGMode Screenshot](https://github.com/SiroCandy06/OGMode/assets/101639160/e50f465b-47b9-4b1a-9c4d-c6fdafaff1c5)
 
-# Lợi ích Mang Lại
-* Sử Dụng Nhanh Chóng Tiện Lợi
-* Cải thiện hiệu suất mang lại trải nghiệm mượt mà hơn trên máy tính
-* Tăng FPS đôi chút tốt hơn so với ban đầu
-* Có chế độ game mode ( Chế độ trò chơi ) giúp tập trung hiệu suất chơi game tốt hơn
-* Tương Lai sẽ cập nhập nhiều tính năng như: Giảm lag game cụ thể, các tính năng tối ưu hoá máy tính chuyên sâu,...
+## Benefits
+- Quick and easy to use
+- Improves performance for smoother PC operation
+- Slight FPS boost compared to default settings
+- **Game Mode** to focus system resources on gaming
+- Future updates: deeper optimizations, specific game lag reductions, etc.
 
-# Nhược điểm
-* Giao diện , đồ hoạ trên máy tính có thể xấu đi ( đồng nghĩa với máy tính bớt gánh hiệu ứng chống máy hoạt động chậm )
-* Chương trình beta Thử nghiệm C#
+## Drawbacks
+- UI and graphics may degrade (reduces system load for better performance)
+- **Beta version** under testing
 
-# Yêu cầu
-Phù hợp với mọi thiết bị máy cấu hình yếu
-* [.NET Desktop Runtime 8.0.1](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
-* Tải và cài đặt: [OGMode](https://github.com/SiroCandy06/OGMode/releases)
+## Requirements
+OGMode works best for low-end systems.
+- **[.NET Desktop Runtime 8.0.1](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)**
+- **[Download & Install OGMode](https://github.com/SiroCandy06/OGMode/releases)**
 
-# Cách Sử dụng
-Đơn giản thoi. 
+## How to Use
+1. Download and install OGMode
+2. Run OGMode as **Administrator**
+3. Use the available features to optimize your system
 
-- Tải và cài đặt chương trình OGmode
-- Mở chương trình lên với quyền admin và sử dụng các chức năng bạn thích
+![OGMode Interface](https://github.com/SiroCandy06/OGMode/assets/101639160/445d2bcc-2220-4553-bc5f-73528130fd8f)
 
-![image](https://github.com/SiroCandy06/OGMode/assets/101639160/445d2bcc-2220-4553-bc5f-73528130fd8f)
+## Version History
+| Version  | Date       | Updates |
+|----------|------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| **v1.4** | 23/06/2024 | Fixed slow loading, added update check, improved Game Mode, RAM cleanup tool, new system tweaks, explorer restart button. |
+| **v1.3** | 06/03/2024 | Fixed Roblox crashes, better browser & YouTube performance, explorer fixes, new cleanup tool, Google DNS for lower ping. |
+| **v1.2** | 19/01/2024 | Fixed missing images in Explorer, added RAM cleaner, Bluetooth disable option, improved UI, fixed YouTube lag. |
+| **v1.1** | 12/01/2024 | Fade-in/out effects, performance optimizations, navigation bug fix, added Windows service optimizations. |
+| **v1.0** | 03/01/2024 | First C# version, introduced Game Mode, increased FPS, upgraded from Batch to C#. |
 
-- Tick vào "Windows Explorer" là tắt Windows Explorer khi bạn sử dụng chế độ trò chơi, bỏ tick thì không tắt.
-- Windows explorer cũng ăn khá nhiều dung lượng RAM trên các cấu hình trung.
-  Lưu ý: Windows explorer khi tắt thì sẽ đen toàn màn hình, chỉ để trống lại một số ứng dụng đang mở thôi, hãy sử dụng alt + tab để di chuyển qua lại.
-  Nếu lỡ tắt ogmode mà không biết bật windows explorer thì: Esc + shift + ctrl -> task manager -> new task -> explorer.exe và enter là xong.
+For earlier batch script versions (v0.1 -> v0.5), see [here](https://osteup.com/tool-ogmode-fix-lag-windows-toi-uu-hoa-may-tinh/).
 
-![image](https://github.com/SiroCandy06/OGMode/assets/101639160/65f2b9e1-d9e6-4c7f-97d3-82d798699a4b)
+## Support
+Join our **Discord community** or contact us via the "Contact" section.
 
-![image](https://github.com/SiroCandy06/OGMode/assets/101639160/40c9ad34-4e0e-43f5-a320-cf500b1b0910)
+![Support](https://github.com/SiroCandy06/OGMode/assets/101639160/504aeffc-4e15-4d63-8c31-ceeec8c700fe)
+```
 
-# Các phiên bản gần đây
-## V1.4 23/6/2024
-### Cải Thiện
-- Fix Lỗi Công Cụ Load Chậm [BUG]
-- Thêm Check Update Vô Chương trình ( Bắt đầu hoạt động ở phiên bản 1.4 )
-- Sửa một số lỗi nhỏ mà viewer báo cáo trước đó
-### Game Mode
-- Cập nhập lên v0.4.6847
-- Thêm một số tính năng tối ưu cải thiện hơn so với phiên bản trước
-### Công Cụ
-- Tuỳ chỉnh RAM (Dọn RAM) Update v0.2
-### Tweaks 
-- Xoá cái fix youtube lag và tự động bổ sung vào chương trình sau khi sử dụng công cụ (Tự động)
-- Thêm tính năng tinh chỉnh hệ thống (Registry Cơ bản)
-- Button Khởi động Explorer ( Cho ai lười khởi động máy mà muốn trải nghiệm luôn registry sau khi sửa đổi, Hiệu quả 80% so với khởi động lại )
+---
 
-## V1.3 – 6/3/2024
-- Fix lỗi văng game roblox
-- Fix lỗi lag trình duyệt + youtube triệt để hơn v1.2
-- Fix lỗi windows explorer not responding mặc dù không tắt windows explorer (win11)
-- Thêm công cụ tối ưu dung lượng , dọn rác tăng tốc máy, giải phóng dung lượng.
-- Tab cài đặt chuyển thành tab tweaks
-- Thêm chế độ giảm ping chơi game vào gamemode -> sử dụng DNS google giảm ping cho các game việt (bật/tắt tuỳ ý)
-- Cải thiện chức năng gamemode thêm một số tuỳ chỉnh.
-- Clean sourcecode
-- Tích hợp oced link vô app
-## V1.2 – 19/1/2024
-- Fix lỗi không hiển thị ảnh trong windows explorer
-- Thêm chức năng dọn RAM vào mục công cụ và gamemode (auto)
-- Thêm phần lựa chọn #Disable_Bluetooth vào gamemode cho người dùng lựa chọn tự do 😀
-- Sửa lại giao diện giảm thiểu khả năng lỗi chương trình
-- Cập nhập command của ogmode chạy ổn định hơn bản cũ // WDLF Osteup [ Version v0.03.8847 ]
-- Bổ sung dialog thông báo người dùng nên chạy chương trình với quyền administrators
-- Fix lỗi youtube bị lag , đơ , chậm ( nếu bị )
-## v1.1 – 12/1/2024
-- Cập nhập hiệu ứng fade-in và fade-out cho application
-- Fix các lỗi nhỏ và tối ưu hiệu suất của chương trình.
-- Fix Bug Navigation Home (Trang Form Giới Thiệu Lỗi .net framework )
-- Cập nhập thêm code tắt services windows tối ưu hoá vào gamemode:
-- Danh sách services để tắt mới được thêm vào:
-- AVCTP service, Bluetooth Support Service, Bluetooth Audio Gateway Service, Bluetooth User Support Service_8c6ce, Connected User Experiences and Telemetry, Downloaded Maps Manager, Internet Connection Sharing (ICS), Program Compatibility Assistant Service, Parental Controls, Windows Error Reporting Service, Windows Camera Frame Server, Windows Insider Service, Server
-## v1.0 – 3/1/2024
-- Công cụ đầu tiên code C#
-- Tối ưu hoá windows ( chức năng gamemode đầu tiên ra mắt )
-- Tăng FPS Chơi Game
-- Phiên bản v0.5 (Batch) cập nhập lên v1 (C#)
+**README_VIE.md**
 
-# Các Phiên bản trước bản v1 ( v0.1 -> v0.5 )
-Đều được sử dụng bằng code batch để tối ưu game.
+```markdown
+# OGMode
+Công cụ tối ưu hoá Windows cho gaming. Chế độ game mode một chạm cho máy tính và laptop.
 
-Bạn có thể đọc thêm chi tiết [tại đây](https://osteup.com/tool-ogmode-fix-lag-windows-toi-uu-hoa-may-tinh/)
+Chỉ với **một cú click**, OGMode sẽ giúp máy tính cấu hình yếu chơi game mượt hơn với các tinh chỉnh có sẵn. 🚀
 
-# Hỗ trợ - Trợ giúp
-Bạn có thể tham gia cộng đồng discord của chúng tôi hoặc liên hệ với tôi qua danh mục "Liên hệ"
+**Trang chính:** [OGMode trên Osteup](https://osteup.com/ogmode/)
 
-![image](https://github.com/SiroCandy06/OGMode/assets/101639160/504aeffc-4e15-4d63-8c31-ceeec8c700fe)
+Được phát triển bởi **Osteup** với **C#** và **Batch** để tối ưu hệ thống.
 
+![Ảnh OGMode](https://github.com/SiroCandy06/OGMode/assets/101639160/e50f465b-47b9-4b1a-9c4d-c6fdafaff1c5)
+
+## Lợi ích
+- Dễ sử dụng, nhanh chóng
+- Cải thiện hiệu suất, giúp máy chạy mượt hơn
+- Tăng nhẹ FPS so với mặc định
+- **Game Mode** giúp tập trung tài nguyên khi chơi game
+- **Cập nhật tương lai**: Giảm lag game cụ thể, tối ưu sâu hơn,...
+
+## Nhược điểm
+- Giao diện có thể xấu đi (giảm hiệu ứng để tăng hiệu suất)
+- **Phiên bản beta** đang thử nghiệm
+
+## Yêu cầu
+Phù hợp với **máy cấu hình yếu**.
+- **[.NET Desktop Runtime 8.0.1](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)**
+- **[Tải & Cài đặt OGMode](https://github.com/SiroCandy06/OGMode/releases)**
+
+## Cách sử dụng
+1. Tải và cài đặt OGMode
+2. Mở chương trình với quyền **Admin**
+3. Sử dụng các chức năng có sẵn để tối ưu hệ thống
+
+![Giao diện OGMode](https://github.com/SiroCandy06/OGMode/assets/101639160/445d2bcc-2220-4553-bc5f-73528130fd8f)
+
+## Lịch sử phiên bản
+| Phiên bản | Ngày        | Cập nhật |
+|-----------|------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| **v1.4** | 23/06/2024 | Sửa lỗi tải chậm, thêm kiểm tra cập nhật, cải thiện Game Mode, dọn RAM, tinh chỉnh hệ thống, nút khởi động lại explorer. |
+| **v1.3** | 06/03/2024 | Fix lỗi Roblox, cải thiện trình duyệt & YouTube, sửa lỗi explorer, công cụ dọn rác, thêm DNS Google giảm ping. |
+| **v1.2** | 19/01/2024 | Sửa lỗi mất ảnh trong Explorer, thêm dọn RAM, tuỳ chọn tắt Bluetooth, cải tiến UI, fix lag YouTube. |
+| **v1.1** | 12/01/2024 | Hiệu ứng fade-in/out, tối ưu hiệu suất, sửa lỗi navigation, tối ưu dịch vụ Windows. |
+| **v1.0** | 03/01/2024 | Phiên bản C# đầu tiên, giới thiệu Game Mode, tăng FPS, nâng cấp từ Batch lên C#. |
+
+Phiên bản batch script trước v1 (v0.1 -> v0.5) có thể xem [tại đây](https://osteup.com/tool-ogmode-fix-lag-windows-toi-uu-hoa-may-tinh/).
+
+## Hỗ trợ
+Tham gia **Discord** hoặc liên hệ qua mục "Liên hệ".
+
+![Hỗ trợ](https://github.com/SiroCandy06/OGMode/assets/101639160/504aeffc-4e15-4d63-8c31-ceeec8c700fe)
