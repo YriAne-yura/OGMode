@@ -1,6 +1,8 @@
 # OGMode
 A tool to optimize Windows for gaming. One-click game mode for desktops and laptops.
 
+[🇻🇳 Xem bản tiếng Việt](./README_VIE.md) | [🇬🇧 View English version](./README.md)
+
 With just one click, OGMode applies pre-configured tweaks to make low-end PCs run games more smoothly. 🚀
 
 **Main page:** [OGMode on Osteup](https://osteup.com/ogmode/)
